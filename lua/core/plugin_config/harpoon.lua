@@ -7,13 +7,13 @@ require("harpoon").setup({
 -- Mapeamentos de teclas
 vim.api.nvim_set_keymap(
 	"n",
-	"<leader>a",
+	"<leader>m",
 	':lua require("harpoon.mark").add_file()<CR>',
 	{ noremap = true, silent = true }
 )
 vim.api.nvim_set_keymap(
 	"n",
-	"<C-e>",
+	"<leader>h",
 	':lua require("harpoon.ui").toggle_quick_menu()<CR>',
 	{ noremap = true, silent = true }
 )

@@ -18,9 +18,9 @@ vim.api.nvim_set_keymap("n", "<leader>P", '"+P', { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "<c-n>", ":NvimTreeFindFileToggle<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
--- Mapeamentos para alternar entre o código e o NvimTree
-vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeFocus<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-l>", ":wincmd l<CR>", { noremap = true, silent = true })
+-- Mapeamentos para alternar entre o código e o NvimTree usando Alt
+vim.api.nvim_set_keymap("n", "<A-h>", ":NvimTreeFocus<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<A-l>", ":wincmd l<CR>", { noremap = true, silent = true })
 
 -- Funções para aumentar e diminuir a largura do NvimTree
 function ResizeNvimTree(amount)
@@ -38,7 +38,7 @@ function DecreaseNvimTreeWidth()
 	ResizeNvimTree(-5) -- Diminuir largura em 5 colunas
 end
 
--- Mapeamentos para ajustar a largura do NvimTree
+-- Mapeamentos para ajustar a largura do NvimTree usando Alt
 vim.api.nvim_set_keymap("n", "<A-Left>", ":lua DecreaseNvimTreeWidth()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<A-Right>", ":lua IncreaseNvimTreeWidth()<CR>", { noremap = true, silent = true })
 
