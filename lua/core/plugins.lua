@@ -29,7 +29,24 @@ return require("packer").startup(function(use)
 	use("romgrk/barbar.nvim")
 	use("numToStr/Comment.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
+
 	use("ThePrimeagen/harpoon")
+	use({
+		"voldikss/vim-floaterm",
+		config = function()
+			-- Configuração do Floaterm
+			vim.g.floaterm_keymap_toggle = "<leader>gg"
+			vim.g.floaterm_width = 8
+			vim.g.floaterm_height = 8
+		end,
+	})
+
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8",

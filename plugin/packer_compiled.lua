@@ -100,7 +100,6 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   harpoon = {
-    config = { "\27LJ\2\n”\6\0\0\a\0\30\1@6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\6\0006\4\3\0009\4\4\0049\4\5\4)\6\0\0B\4\2\2\23\4\0\4=\4\a\3=\3\t\2B\0\2\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\f\0'\4\r\0005\5\14\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\15\0'\4\16\0005\5\17\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\18\0'\4\19\0005\5\20\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\21\0'\4\22\0005\5\23\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\24\0'\4\25\0005\5\26\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\27\0'\4\28\0005\5\29\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2/:lua require(\"harpoon.ui\").nav_file(4)<CR>\n<C-s>\1\0\2\fnoremap\2\vsilent\2/:lua require(\"harpoon.ui\").nav_file(3)<CR>\n<C-n>\1\0\2\fnoremap\2\vsilent\2/:lua require(\"harpoon.ui\").nav_file(2)<CR>\n<C-t>\1\0\2\fnoremap\2\vsilent\2/:lua require(\"harpoon.ui\").nav_file(1)<CR>\n<C-h>\1\0\2\fnoremap\2\vsilent\0027:lua require(\"harpoon.ui\").toggle_quick_menu()<CR>\n<C-e>\1\0\2\fnoremap\2\vsilent\0020:lua require(\"harpoon.mark\").add_file()<CR>\14<leader>a\6n\20nvim_set_keymap\tmenu\1\0\1\tmenu\0\nwidth\1\0\1\nwidth\0\23nvim_win_get_width\bapi\bvim\nsetup\fharpoon\frequire\b\0" },
     loaded = true,
     path = "/Users/dev/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
@@ -134,6 +133,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dev/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/Users/dev/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -185,6 +190,12 @@ _G.packer_plugins = {
     path = "/Users/dev/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
   },
+  ["vim-floaterm"] = {
+    config = { "\27LJ\2\n‚\1\0\0\2\0\6\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\b\0=\1\4\0006\0\0\0009\0\1\0)\1\b\0=\1\5\0K\0\1\0\20floaterm_height\19floaterm_width\15<leader>gg\27floaterm_keymap_toggle\6g\bvim\0" },
+    loaded = true,
+    path = "/Users/dev/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/dev/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
@@ -193,10 +204,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: harpoon
-time([[Config for harpoon]], true)
-try_loadstring("\27LJ\2\n”\6\0\0\a\0\30\1@6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\6\0006\4\3\0009\4\4\0049\4\5\4)\6\0\0B\4\2\2\23\4\0\4=\4\a\3=\3\t\2B\0\2\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\f\0'\4\r\0005\5\14\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\15\0'\4\16\0005\5\17\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\18\0'\4\19\0005\5\20\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\21\0'\4\22\0005\5\23\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\24\0'\4\25\0005\5\26\0B\0\5\0016\0\3\0009\0\4\0009\0\n\0'\2\v\0'\3\27\0'\4\28\0005\5\29\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2/:lua require(\"harpoon.ui\").nav_file(4)<CR>\n<C-s>\1\0\2\fnoremap\2\vsilent\2/:lua require(\"harpoon.ui\").nav_file(3)<CR>\n<C-n>\1\0\2\fnoremap\2\vsilent\2/:lua require(\"harpoon.ui\").nav_file(2)<CR>\n<C-t>\1\0\2\fnoremap\2\vsilent\2/:lua require(\"harpoon.ui\").nav_file(1)<CR>\n<C-h>\1\0\2\fnoremap\2\vsilent\0027:lua require(\"harpoon.ui\").toggle_quick_menu()<CR>\n<C-e>\1\0\2\fnoremap\2\vsilent\0020:lua require(\"harpoon.mark\").add_file()<CR>\14<leader>a\6n\20nvim_set_keymap\tmenu\1\0\1\tmenu\0\nwidth\1\0\1\nwidth\0\23nvim_win_get_width\bapi\bvim\nsetup\fharpoon\frequire\b\0", "config", "harpoon")
-time([[Config for harpoon]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: vim-floaterm
+time([[Config for vim-floaterm]], true)
+try_loadstring("\27LJ\2\n‚\1\0\0\2\0\6\0\r6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\b\0=\1\4\0006\0\0\0009\0\1\0)\1\b\0=\1\5\0K\0\1\0\20floaterm_height\19floaterm_width\15<leader>gg\27floaterm_keymap_toggle\6g\bvim\0", "config", "vim-floaterm")
+time([[Config for vim-floaterm]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

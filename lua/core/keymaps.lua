@@ -48,3 +48,9 @@ vim.api.nvim_set_keymap("n", "]b", ":bnext<CR>", { noremap = true, silent = true
 
 -- Mapeamento personalizado para salvar o arquivo com <leader>w
 vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = true })
+
+-- Mapeamento para Triggar o LazyGit
+vim.api.nvim_set_keymap("n", "<leader>gg", "!lazygit", { noremap = true, silent = true })
+
+-- Mapeamento para abrir o LazyGit
+vim.api.nvim_set_keymap("n", "<leader>gg", ":FloatermNew lazygit<CR>", { noremap = true, silent = true })
