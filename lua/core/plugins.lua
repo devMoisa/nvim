@@ -28,6 +28,7 @@ return require("packer").startup(function(use)
 	use("ThePrimeagen/vim-be-good")
 	use("f-person/git-blame.nvim")
 	use("romgrk/barbar.nvim")
+	use("tpope/vim-fugitive")
 	use({
 		"goolord/alpha-nvim",
 		requires = { "nvim-tree/nvim-web-devicons" },
