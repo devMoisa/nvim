@@ -22,11 +22,76 @@ return require("packer").startup(function(use)
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
 	use("lewis6991/gitsigns.nvim")
+	use("norcalli/nvim-colorizer.lua")
 	use("christoomey/vim-tmux-navigator")
 	use("mattkubej/jest.nvim")
 	use("ThePrimeagen/vim-be-good")
 	use("f-person/git-blame.nvim")
 	use("romgrk/barbar.nvim")
+	use({
+		"goolord/alpha-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			local alpha = require("alpha")
+			local dashboard = require("alpha.themes.dashboard")
+			vim.cmd([[
+      hi AlphaHeader guifg=#800080
+    ]])
+			-- Set header
+			dashboard.section.header.val = {
+				"",
+				"",
+				"▓█████▄ ▓█████  ██▒   █▓    ███▄ ▄███▓ ▒█████   ██▓  ██████  ▄▄▄      ",
+				"▒██▀ ██▌▓█   ▀ ▓██░   █▒   ▓██▒▀█▀ ██▒▒██▒  ██▒▓██▒▒██    ▒ ▒████▄    ",
+				"░██   █▌▒███    ▓██  █▒░   ▓██    ▓██░▒██░  ██▒▒██▒░ ▓██▄   ▒██  ▀█▄  ",
+				"░▓█▄   ▌▒▓█  ▄   ▒██ █░░   ▒██    ▒██ ▒██   ██░░██░  ▒   ██▒░██▄▄▄▄██ ",
+				"░▒████▓ ░▒████▒   ▒▀█░     ▒██▒   ░██▒░ ████▓▒░░██░▒██████▒▒ ▓█   ▓██▒",
+				" ▒▒▓  ▒ ░░ ▒░ ░   ░ ▐░     ░ ▒░   ░  ░░ ▒░▒░▒░ ░▓  ▒ ▒▓▒ ▒ ░ ▒▒   ▓▒█░",
+				" ░ ▒  ▒  ░ ░  ░   ░ ░░     ░  ░      ░  ░ ▒ ▒░  ▒ ░░ ░▒  ░ ░  ▒   ▒▒ ░",
+				" ░ ░  ░    ░        ░░     ░      ░   ░ ░ ░ ▒   ▒ ░░  ░  ░    ░   ▒   ",
+				"   ░       ░  ░      ░            ░       ░ ░   ░        ░        ░  ░",
+				" ░                  ░                                                 ",
+			}
+
+			-- Set buttons
+			dashboard.section.buttons.val = {
+				dashboard.button("n", "   New file", ":ene <BAR> startinsert <CR>"),
+				dashboard.button("f", "󰮗   Find file", ":cd $HOME | Telescope find_files<CR>"),
+				dashboard.button("e", "   File Explorer", ":cd $HOME | Neotree<CR>"),
+				dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
+				dashboard.button("c", "   Configuration", ":e ~/.config/nvim/lua/user/config.lua<CR>"),
+				dashboard.button("R", "󱘞   Ripgrep", ":Telescope live_grep<CR>"),
+				dashboard.button("q", "󰗼   Quit", ":qa<CR>"),
+			}
+
+			-- Function to center text
+			local function centerText(text, width)
+				local totalPadding = width - #text
+				local leftPadding = math.floor(totalPadding / 2)
+				local rightPadding = totalPadding - leftPadding
+				return string.rep(" ", leftPadding) .. text .. string.rep(" ", rightPadding)
+			end
+
+			-- Set footer
+			dashboard.section.footer.val = {
+				centerText("Kaizoku Ou Ni Ore Wa Naru", 50),
+				" ",
+				centerText(os.date("%a %d %b"), 50),
+				centerText(os.date("%H:%M"), 50),
+				centerText(
+					" v" .. vim.version().major .. "." .. vim.version().minor .. "." .. vim.version().patch,
+					50
+				),
+			}
+
+			-- Send config to alpha
+			alpha.setup(dashboard.opts)
+
+			-- Disable folding on alpha buffer
+			vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
+		end,
+	})
+
 	use("numToStr/Comment.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({
@@ -36,16 +101,39 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use("ThePrimeagen/harpoon")
 	use({
-		"voldikss/vim-floaterm",
+		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			-- Configuração do Floaterm
-			vim.g.floaterm_keymap_toggle = "<leader>gg"
-			vim.g.floaterm_width = 8
-			vim.g.floaterm_height = 8
+			local highlight = {
+				"RainbowRed",
+				"RainbowYellow",
+				"RainbowBlue",
+				"RainbowOrange",
+				"RainbowGreen",
+				"RainbowViolet",
+				"RainbowCyan",
+			}
+
+			local hooks = require("ibl.hooks")
+			-- create the highlight groups in the highlight setup hook, so they are reset
+			-- every time the colorscheme changes
+			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+				vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
+				vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+				vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+				vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+				vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+				vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+				vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+			end)
+			require("ibl").setup({
+				indent = { highlight = highlight },
+			})
 		end,
 	})
+
+	use("ThePrimeagen/harpoon")
+	use("voldikss/vim-floaterm")
 
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -57,7 +145,6 @@ return require("packer").startup(function(use)
 		tag = "*",
 	})
 
-	-- Plugins para integração e formatação de código
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },

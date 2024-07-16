@@ -53,4 +53,9 @@ vim.api.nvim_set_keymap("n", "<leader>w", ":w<CR>", { noremap = true, silent = t
 vim.api.nvim_set_keymap("n", "<leader>gg", "!lazygit", { noremap = true, silent = true })
 
 -- Mapeamento para abrir o LazyGit
-vim.api.nvim_set_keymap("n", "<leader>gg", ":FloatermNew lazygit<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>gg",
+	":FloatermNew --width=1.0 --height=1.0 lazygit<CR>",
+	{ noremap = true, silent = true }
+)
