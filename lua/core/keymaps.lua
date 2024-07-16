@@ -59,3 +59,30 @@ vim.api.nvim_set_keymap(
 	":FloatermNew --width=1.0 --height=1.0 lazygit<CR>",
 	{ noremap = true, silent = true }
 )
+
+-- Função para abrir uma nova janela dividida verticalmente
+function OpenInVerticalSplit()
+	local lib = require("nvim-tree.lib")
+	local node = lib.get_node_at_cursor()
+	if node and node.absolute_path then
+		-- Salva a janela atual (que deve ser o Neo-tree)
+		local neotree_win = vim.api.nvim_get_current_win()
+
+		-- Abre o arquivo em um vsplit
+		vim.cmd("vsplit " .. node.absolute_path)
+
+		-- Move a janela recém-aberta para a direita
+		vim.cmd("wincmd L")
+
+		-- Volta o foco para o Neo-tree
+		vim.api.nvim_set_current_win(neotree_win)
+	end
+end
+
+-- Autocmd para mapear 'v' apenas no NvimTree
+vim.cmd([[
+  augroup NvimTreeGroup
+    autocmd!
+    autocmd FileType NvimTree lua vim.api.nvim_buf_set_keymap(0, 'n', 'v', ':lua OpenInVerticalSplit()<CR>', { noremap = true, silent = true })
+  augroup END
+]])
