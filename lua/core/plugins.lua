@@ -39,21 +39,53 @@ return require("packer").startup(function(use)
       hi AlphaHeader guifg=#800080
     ]])
 			-- Set header
-			dashboard.section.header.val = {
-				"",
-				"",
-				"▓█████▄ ▓█████  ██▒   █▓    ███▄ ▄███▓ ▒█████   ██▓  ██████  ▄▄▄      ",
-				"▒██▀ ██▌▓█   ▀ ▓██░   █▒   ▓██▒▀█▀ ██▒▒██▒  ██▒▓██▒▒██    ▒ ▒████▄    ",
-				"░██   █▌▒███    ▓██  █▒░   ▓██    ▓██░▒██░  ██▒▒██▒░ ▓██▄   ▒██  ▀█▄  ",
-				"░▓█▄   ▌▒▓█  ▄   ▒██ █░░   ▒██    ▒██ ▒██   ██░░██░  ▒   ██▒░██▄▄▄▄██ ",
-				"░▒████▓ ░▒████▒   ▒▀█░     ▒██▒   ░██▒░ ████▓▒░░██░▒██████▒▒ ▓█   ▓██▒",
-				" ▒▒▓  ▒ ░░ ▒░ ░   ░ ▐░     ░ ▒░   ░  ░░ ▒░▒░▒░ ░▓  ▒ ▒▓▒ ▒ ░ ▒▒   ▓▒█░",
-				" ░ ▒  ▒  ░ ░  ░   ░ ░░     ░  ░      ░  ░ ▒ ▒░  ▒ ░░ ░▒  ░ ░  ▒   ▒▒ ░",
-				" ░ ░  ░    ░        ░░     ░      ░   ░ ░ ░ ▒   ▒ ░░  ░  ░    ░   ▒   ",
-				"   ░       ░  ░      ░            ░       ░ ░   ░        ░        ░  ░",
-				" ░                  ░                                                 ",
-			}
+			--		dashboard.section.header.val = {
+			--			"",
+			--			"",
+			--			"▓█████▄ ▓█████  ██▒   █▓    ███▄ ▄███▓ ▒█████   ██▓  ██████  ▄▄▄      ",
+			--			"▒██▀ ██▌▓█   ▀ ▓██░   █▒   ▓██▒▀█▀ ██▒▒██▒  ██▒▓██▒▒██    ▒ ▒████▄    ",
+			--			"░██   █▌▒███    ▓██  █▒░   ▓██    ▓██░▒██░  ██▒▒██▒░ ▓██▄   ▒██  ▀█▄  ",
+			--			"░▓█▄   ▌▒▓█  ▄   ▒██ █░░   ▒██    ▒██ ▒██   ██░░██░  ▒   ██▒░██▄▄▄▄██ ",
+			--			"░▒████▓ ░▒████▒   ▒▀█░     ▒██▒   ░██▒░ ████▓▒░░██░▒██████▒▒ ▓█   ▓██▒",
+			--			" ▒▒▓  ▒ ░░ ▒░ ░   ░ ▐░     ░ ▒░   ░  ░░ ▒░▒░▒░ ░▓  ▒ ▒▓▒ ▒ ░ ▒▒   ▓▒█░",
+			--			" ░ ▒  ▒  ░ ░  ░   ░ ░░     ░  ░      ░  ░ ▒ ▒░  ▒ ░░ ░▒  ░ ░  ▒   ▒▒ ░",
+			--			" ░ ░  ░    ░        ░░     ░      ░   ░ ░ ░ ▒   ▒ ░░  ░  ░    ░   ▒   ",
+			--			"   ░       ░  ░      ░            ░       ░ ░   ░        ░        ░  ░",
+			--			" ░                  ░                                                 ",
+			--		}
 
+			-- Set header
+			dashboard.section.header.val = {
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⢶⡶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠟⠁⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣴⣶⣿⣿⣿⣿⣿⣷⣾⣶⣶⢂⣴⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢋⡴⠋⠁⠀⠀⠀⢀⣴⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣋⠒⠁⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣷⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣡⡾⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢟⣱⡦⠋⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀ ⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⢵⠿⠋⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠈⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠋⠀⠀⠀⠀⠀⠀⠀⢀⢴⣿⠟⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⡀⠀⠀⠀⠀⠀⠀⣠⡶⠶⣿⡍⣆⠗⢨⠄⠉⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣯⠀⠀⠀⠀⣀⣌⠻⡷⠮⠻⡇⣏⣰⡥⠄⠀⠀⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀",
+				"⠀⠀⠀⠐⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⡟⠉⠁⣀⠀⢀⣼⣿⠟⠁⠀⢃⠀⢡⠞⠛⣠⣶⣠⡀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀",
+				"⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⣰⣿⣿⢻⣿⠏⡴⠀⣰⠏⠀⠀⠚⠙⠛⣿⡿⢿⡀⠂⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀",
+				"⠀⠀⠀⣿⣿⣏⢟⡩⢹⣿⣟⡿⣋⣴⣷⠀⠀⠸⣻⠏⠐⡟⢘⣁⡼⠃⠀⠀⠀⠀⠤⠗⠛⠓⠒⠛⠂⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡗⠀⠀⠀",
+				"⠀⠀⠀⣿⣿⣿⣷⢬⣿⠇⣩⣾⣿⣿⣿⡖⠀⠀⠁⠀⠀⣿⡵⠛⠀⣠⣄⣀⡀⠀⠀⠀⢘⡽⠁⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣗⠀⠀⠀",
+				"⠀⠀⠀⣿⣿⣿⣷⡛⠁⣰⣿⣿⣿⣿⣿⣿⡃⠀⠀⠀⢀⣫⣥⠀⣴⣿⣿⣿⠿⠿⠟⠀⢸⡃⠀⡅⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀",
+				"⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣄⣤⣿⡿⠟⠘⠛⠉⠉⠀⢀⠀⡀⡆⢹⣽⡈⠀⣠⣾⠇⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀",
+				"⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣶⠤⠀⠀⣀⠾⠼⠲⠃⠉⢏⠃⠀⠀⣿⣿⡃⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡏⡅⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⠃⠀⠀⠹⠉⠁⠀⠀⠀⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⡀⠀⠀⠀⣀⣤⣶⣾⣧⣀⡿⠀⠀⠀⠀⠀⣆⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⡿⢻⣿⡟⠀⠀⠀ ⠀",
+				"⠀⠀⠀ ⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⠃⠀⠀⠰⠂⠀⠆⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⠻⣿⣷⣿⡟⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠘⠟⠀⠀⠠⠠⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⢻⣭⣿⣿⣧⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢻⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠿⣿⣿⣿⣟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+				"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠿⠿⢿⠿⠷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+			}
 			-- Set buttons
 			dashboard.section.buttons.val = {
 				dashboard.button("n", "   New file", ":ene <BAR> startinsert <CR>"),
@@ -75,14 +107,9 @@ return require("packer").startup(function(use)
 
 			-- Set footer
 			dashboard.section.footer.val = {
-				centerText("Kaizoku Ou Ni Ore Wa Naru", 50),
-				" ",
+				centerText("Github: devMoisa", 50),
 				centerText(os.date("%a %d %b"), 50),
 				centerText(os.date("%H:%M"), 50),
-				centerText(
-					" v" .. vim.version().major .. "." .. vim.version().minor .. "." .. vim.version().patch,
-					50
-				),
 			}
 
 			-- Send config to alpha
@@ -102,36 +129,36 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use({
-		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			local highlight = {
-				"RainbowRed",
-				"RainbowYellow",
-				"RainbowBlue",
-				"RainbowOrange",
-				"RainbowGreen",
-				"RainbowViolet",
-				"RainbowCyan",
-			}
+	--	use({
+	--	"lukas-reineke/indent-blankline.nvim",
+	--config = function()
+	--local highlight = {
+	--"RainbowRed",
+	--	"RainbowYellow",
+	--	"RainbowBlue",
+	--	"RainbowOrange",
+	--	"RainbowGreen",
+	--	"RainbowViolet",
+	--	"RainbowCyan",
+	--}
 
-			local hooks = require("ibl.hooks")
-			-- create the highlight groups in the highlight setup hook, so they are reset
-			-- every time the colorscheme changes
-			hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-				vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
-				vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
-				vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
-				vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-				vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
-				vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
-				vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
-			end)
-			require("ibl").setup({
-				indent = { highlight = highlight },
-			})
-		end,
-	})
+	--	local hooks = require("ibl.hooks")
+	-- create the highlight groups in the highlight setup hook, so they are reset
+	-- every time the colorscheme changes
+	--		hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+	--		vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
+	--	vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+	--vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+	--vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+	--	vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+	--	vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+	--vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+	--end)
+	--require("ibl").setup({
+	--	indent = { highlight = highlight },
+	--})
+	--end,
+	--	})
 
 	use("ThePrimeagen/harpoon")
 	use("voldikss/vim-floaterm")
